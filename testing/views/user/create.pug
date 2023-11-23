@@ -1,0 +1,31 @@
+extends ../layout
+block content
+    div.card
+        div.card-header
+            p.card-title.h2 Thêm người dùng
+        div.card-body
+            form(action="./store" method="POST" enctype="multipart/form-data")
+                div
+                    div.mx-3.my-3
+                        label.form-label.h6(for="username") Tên người dùng
+                        input.form-control#username(name="username" type="text")
+                    div.mx-3.my-3
+                        label.form-label.h6(for="email") Email
+                        input.form-control#email(name="email" type="email")
+                    div.mx-3.my-3
+                        label.form-label.h6(for="phone") Số điện thoại
+                        input.form-control#phone(name="phone" type="text")
+                    div.mx-3.my-3
+                        label.form-label.h6(for="balance") Số dư
+                        input.form-control#balance(name="balance" type="number")
+                    div.col.mx-3.my-3
+                        label.form-label.h6(for="password") Mật khẩu
+                        input.form-control#password(name="password" type="password")
+                    button.btn.btn-primary.mx-3.my-3(type="submit") Thêm người dùng
+
+
+
+
+
+
+

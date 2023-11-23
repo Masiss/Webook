@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChapterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/outline_arrow_back_24"
+                app:tint="@color/kGreen" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="Nhập số trang:"
+                android:textSize="20dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/page_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="0" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/jumpPage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="10dp"
+                android:layout_marginLeft="8dp"
+                android:text="Nhảy trang"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View style="@style/Divider.Horizontal" />
+
+    <!--    <ScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="11dp"
+        android:orientation="vertical">
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--            <TextView-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+
+        <!--                android:text="Có được cái nhìn trực tiếp về một trong những chương đen tối nhất của nhân loại"-->
+        <!--                android:textSize="24sp"-->
+        <!--                android:textStyle="bold" />-->
+
+        <!--            <Space-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="32dp" />-->
+
+        <!--            <TextView-->
+        <!--                android:textSize="18sp"-->
+
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="@string/chapter_1" />-->
+    </LinearLayout>
+    <!--    </ScrollView>-->
+</LinearLayout>

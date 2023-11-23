@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#08212E"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="THÔNG TIN CÁ NHÂN"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+
+    <!--    fix image cricle-->
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:srcCompat="@tools:sample/avatars" />
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="HỌ VÀ TÊN"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@color/kGreen"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_gravity="center_horizontal"
+            android:background="@color/kGreen"
+            android:text="Nguyen Van A" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="NGÀY SINH"
+        android:textSize="20dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@color/kGreen"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/kGreen"
+            android:text="14-08-2002" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    gioi tinh-->
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="NAM" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="NỮ" />
+    </RadioGroup>
+
+
+    <!--        <RadioButton-->
+    <!--            android:id="@+id/radioButton"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Nam" />-->
+
+    <!--        <RadioButton-->
+    <!--            android:id="@+id/radioButton2"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Nữ" />-->
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="SỐ ĐIỆN THOẠI"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@color/kGreen"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/kGreen"
+            android:inputType="textPhonetic"
+            android:text="09879999" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="ĐỊA CHỈ"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@color/kGreen"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/kGreen"
+            android:inputType="textPhonetic"
+            android:text="Lê Duẩn, Quận 1, Tp Hồ Chí Minh" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="26dp" />
+
+    <Button
+        android:layout_width="358dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/kGreen"
+        android:text="HOÀN TẤT"
+        android:textColor="@color/teal_200"
+        android:textSize="18dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+</LinearLayout>

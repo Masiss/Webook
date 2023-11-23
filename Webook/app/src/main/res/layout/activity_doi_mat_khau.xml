@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#08212E"
+    android:orientation="vertical"
+    tools:context=".DoiMatKhauActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/outline_arrow_back_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="ĐỔI MẬT KHẨU"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/change_password" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="MẬT KHẨU CŨ"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/edt_old_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/no_border_input"
+        android:inputType="textPassword"
+        android:text="123456789"
+        android:textColor="@color/white" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="MẬT KHẨU MỚI"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/edt_new_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/no_border_input"
+        android:inputType="textPassword"
+        android:text="3211234567"
+        android:textColor="@color/white" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="NHẬP LẠI MẬT KHẨU MỚI"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/edt_repeatPassword"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/no_border_input"
+        android:inputType="textPassword"
+        android:text="3211234567"
+        android:textColor="@color/white" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="26dp" />
+
+    <TextView
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/green_border"
+        android:padding="11dp"
+        android:text="HOÀN TẤT"
+        android:textAlignment="center"
+        android:textColor="@color/kLightGreen"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</LinearLayout>

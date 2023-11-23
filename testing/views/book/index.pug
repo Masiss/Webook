@@ -1,0 +1,174 @@
+extends ../layout
+
+block content
+
+    .containter.m-5
+        .card
+            .card-header
+                span.card-title Quản lí sách
+            .card-body
+                span.text-success#message
+                if message !== null
+                    console.log(typeof message)
+                    if message.id === 200
+                        span.text-success#success=message.content
+                    else
+                        span.text-danger#failed=message.content
+
+                div.d-flex.flex-row.justify-content-between.mt-3.mb-5.ms-3
+                    a.btn.btn-primary.align-content-center.my-auto(href="./create") Thêm sách
+                    button.btn.btn-info#publish(href="#" disabled="true") Đăng
+                div.d-flex.col.align-content-center.justify-content-center.w-25
+                    span.card-text Lọc:
+                    select.form-select#filter
+                        option(value="0") Tất cả
+                        option(value="1") Đã đăng
+                        option(value="2") Chưa đăng
+                table#table.table
+                    thead
+                        tr
+                            th
+                            th
+                            th#title Tiêu đề
+                            th#price Giá
+                            th#sold Lượt mua
+                            th#createdAt Thời gian thêm
+                            th Đã đăng
+                            th
+                            th
+                    tbody#tbody
+
+    script(type="text/javascript" src="/jquery.js")
+    //link(rel="stylesheet" src="/css/jquery.dataTables.css")
+    script(type="text/javascript" src="/js/jquery.dataTables.js")
+
+    script.
+
+
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+
+        $(document).ready(() => {
+            let table = $('#table').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "pageLength": 5,
+                "processing": true,
+                "ajax": {
+                    "url": '/book/',
+                    "type": 'POST',
+                    "data": {
+                        filter: () => {
+                            return document.getElementById('filter').value;
+                        }
+                    },
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: {id: 'id', is_published: 'is_published'},
+                        render: (data) => {
+                            return `<input type="checkbox" value="${data.id}" name="id[]" ${data.is_published ? "disabled checked" : ""}/> `
+                        }
+                    },
+                    {
+                        "data": 'image',
+                        "render": (data) => {
+                            return `<img width="100"  src="${data}"/>`
+                        }
+                    },
+                    {"data": 'title'},
+                    {"data": 'price'},
+                    {"data": 'sold'},
+                    {"data": 'created_at'},
+                    {
+                        data: 'is_published',
+                        render: (data) => {
+                            // return `<input type="checkbox" ${data ? 'checked' : ''} disabled />`;
+                            return data ? 'Đã đăng' : 'Chưa đăng';
+                        }
+                    },
+                    {
+                        "data": 'id',
+                        render: (data) => {
+                            return '<a class="btn btn-info" href="/book/' + data + '/detail">Chi tiết</a>'
+                        }
+                    },
+                    {
+                        "data": 'id',
+                        render: (data) => {
+                            return '<form name="deleteForm" action="/book/' + data + '/delete" method="POST">' +
+                                '<input hidden="hidden" value="' + data + '"/> ' +
+                                '<button class="btn btn-danger" type="submit">Xoá' +
+                                '</button></form>';
+                        }
+                    }
+                ]
+            }).draw();
+
+
+            document.querySelector("#table_filter label input").classList = "form-control ms-3 w-25";
+            document.querySelector("#table_filter label").classList = "card-text d-flex my-3 align-items-center";
+            document.querySelector("#table_length label").classList = "card-text d-flex my-3 align-items-center";
+            document.querySelector("#table_length label select").classList = "form-select mx-3 w-20";
+            document.querySelector("#table_paginate").classList = "d-flex justify-content-evenly";
+            document.querySelector("#table_info").classList = "card-text";
+            table.on('draw', () => {
+                document.querySelectorAll('input[name="id[]"]').forEach(a => {
+                    a.addEventListener('change', (ev) => {
+                        document.getElementById('publish').disabled = false;
+                    })
+                })
+
+                document.querySelectorAll('form[name="deleteForm"]').forEach(a => {
+                    a.addEventListener('submit', (ev) => {
+                        ev.preventDefault();
+                        $.ajax({
+                            url: a.action,
+                            method: 'POST',
+                            dataSrc: '',
+                            dataType: "JSON",
+                            success: (res) => {
+                                console.log(res);
+                                document.getElementById('message').innerText = res.message;
+                                table.clear().draw();
+                            },
+                            error: (res) => {
+                                document.getElementById('message').classList.add('text-danger');
+                                document.getElementById('message').innerText = res.responseJSON.message;
+                            }
+                        })
+                    })
+                })
+
+
+            })
+            document.getElementById('publish').addEventListener('click', () => {
+                let publishList = [];
+                document.querySelectorAll('input[name="id[]"]:not([disabled]):checked').forEach(item => {
+                    publishList.push(item.value);
+                })
+                $.ajax({
+                    method: 'POST',
+                    url: '/book/publish',
+                    data: {listBooks: publishList},
+                    dataType: 'JSON',
+                    dataSrc: "",
+                    success: (res) => {
+                        console.log(res);
+                        document.getElementById('message').innerText = res.message;
+                        setTimeout(() => document.getElementById('message').innerText = "", 5000);
+                        table.clear().draw();
+                    },
+
+
+                })
+            })
+            setTimeout(() => document.getElementById('success').innerText = "", 5000);
+            setTimeout(() => document.getElementById('failed').innerText = "", 5000);
+            document.getElementById('filter').addEventListener('change', (ev) => {
+                $('#table').DataTable().ajax.reload();
+            })
+        })

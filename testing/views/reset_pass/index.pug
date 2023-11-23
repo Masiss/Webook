@@ -1,0 +1,90 @@
+extends ../layout
+
+block content
+
+    .containter.m-5
+        .card
+            .card-header
+                span.card-title Khởi tạo mật khẩu
+            .card-body
+                div.d-flex.flex-row.justify-content-between.mt-3.mb-5.ms-3
+                    a.btn.btn-primary.align-content-center.my-auto(href="./create") Thêm người dùng
+
+                table#table.table
+                    thead
+                        tr
+                            th Tên người dùng
+                            th Email
+                            th Được tạo lúc
+                            th
+                            th
+                    tbody#tbody
+
+    script(type="text/javascript" src="/jquery.js")
+    //link(rel="stylesheet" src="/css/jquery.dataTables.css")
+    script(type="text/javascript" src="/js/jquery.dataTables.js")
+
+    script.
+
+
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+
+        $(document).ready(() => {
+            // $.noConflict();
+            let table = $('#table').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "processing": true,
+                "ajax": {
+                    "url": '/reset_password/',
+                    "type": 'POST',
+                    "data": "JSON",
+                    dataSrc: ""
+                },
+                columns: [
+
+                    {"data": 'username'},
+                    {"data": 'email'},
+                    {"data": 'created_at'},
+                    {
+                        "data": 'id',
+                        render: (data) => {
+                            return '<a class="btn btn-info" name="reset" href="/reset_password/' + data + '/sendmail">Đổi mật khẩu</a>'
+                        }
+                    },
+                    {
+                        "data": 'id',
+                        render: (data) => {
+                            return '<form action="/reset_password/' + data + '/delete" method="POST">' +
+                                '<input hidden="hidden" value="' + data + '"/> ' +
+                                '<button class="btn btn-danger" type="submit">Xoá' +
+                                '</button></form>';
+                        }
+                    }
+                ]
+            }).draw();
+            table.on('draw', () => {
+                document.querySelectorAll('a[name="reset"]').forEach(a => {
+                    a.addEventListener('click', (ev) => {
+                        ev.preventDefault();
+                        console.log(a.href.split('/'));
+                        $.ajax({
+                            url: a.href,
+                            method: 'POST',
+                            success: (res) => {
+                                console.log(res);
+                            }
+                        })
+                    })
+                })
+            })
+            document.querySelector("#table_filter label input").classList = "form-control ms-3 w-25";
+            document.querySelector("#table_filter label").classList = "card-text d-flex my-3 align-items-center";
+            document.querySelector("#table_length label").classList = "card-text d-flex my-3 align-items-center";
+            document.querySelector("#table_length label select").classList = "form-select mx-3 w-20";
+        })
+
+

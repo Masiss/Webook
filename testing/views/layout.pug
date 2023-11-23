@@ -1,0 +1,27 @@
+doctype html
+html
+    head
+        title WeBook
+        link(rel='stylesheet', href='/css/bootstrap.css')
+        script(type="text/javascript" src='/jquery.js')
+        script(type="text/javascript" src='/js/bootstrap.bundle.js')
+        script(type="text/javascript" src='/javascripts/sidebarmenu.js')
+        script(type="text/javascript" src='/javascripts/app.min.js')
+        script(type="text/javascript" src='/simplebar.js')
+        link(rel="stylesheet" src='/simplebar.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+
+    body
+        div.page-wrapper#main-wrapper(
+            data-layout="vertical"
+            data-navbarbg="skin6"
+            data-sidebartype="full"
+            data-sidebar-position="fixed"
+            data-header-position="fixed"
+        )
+            include layout/sidebar
+            div.body-wrapper
+                include layout/header
+                div.container-fluid
+                    block content
+

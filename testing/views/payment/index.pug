@@ -1,0 +1,138 @@
+extends ../layout
+
+block content
+
+    .containter.m-5
+        .card
+            .card-header
+                span.card-title Xử lí giao dịch
+            .card-body
+                span#message
+                div.w-25
+                    label.form-label(for="filter") Lọc
+                    select.form-select#filter
+                        option(value="0") Tất cả
+                        option(value="1") Đã duyệt
+                        option(value="2") Chưa duyệt
+                div.d-flex.flex-row.justify-content-between.mt-3.mb-5.ms-3
+                table#table.table
+                    thead
+                        tr
+                            th Tên người dùng
+                            th Email
+                            th Mã giao dịch
+                            th Số tiền
+                            th Trạng thái
+                            th
+                            th
+                    tbody#tbody
+
+    script(type="text/javascript" src="/jquery.js")
+    script(type="text/javascript" src="/js/jquery.dataTables.js")
+
+    script.
+
+
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+
+        $(document).ready(() => {
+            // $.noConflict();
+            let table = $('#table').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "processing": true,
+                "ajax": {
+                    "url": '/payment/',
+                    "type": 'POST',
+                    "data": {
+                        filter: () => {
+                            return document.getElementById('filter').value
+                        }
+                    },
+                    dataSrc: ""
+                },
+                columns: [
+                    {"data": 'username'},
+                    {"data": 'email'},
+                    {"data": 'paymentID'},
+                    {"data": 'amount'},
+                    {
+                        "data": 'is_accepted',
+                        render: (data) => {
+                            console.log(data)
+                            return data ? "Đã duyệt" : "Chưa duyệt"
+                        }
+                    },
+                    {
+                        "data": {id: 'id', is_accepted: 'is_accepted'},
+                        render: (data) => {
+                            return `<form name="accept" action="/payment/${data.id}/accept" method="POST">` +
+                                `<input hidden="hidden" value="' + data.id + '"/> ` +
+                                `<button class="btn btn-primary" type="submit" ${data.is_accepted ? "disabled" : ""}>Cập nhật số dư` +
+                                `</button></form>`;
+                        }
+                    },
+                    {
+                        "data": 'id',
+                        render: (data) => {
+                            return '<form name="delete" action="/payment/' + data + '/delete" method="POST">' +
+                                '<input hidden="hidden" value="' + data + '"/> ' +
+                                '<button class="btn btn-danger" type="submit">Xoá' +
+                                '</button></form>';
+                        }
+                    }
+                ]
+            }).draw();
+            table.on('draw', () => {
+                document.querySelector("#table_filter label input").classList = "form-control ms-3 w-25";
+                document.querySelector("#table_filter label").classList = "card-text d-flex my-3 align-items-center";
+                document.querySelector("#table_length label").classList = "card-text d-flex my-3 align-items-center";
+                document.querySelector("#table_length label select").classList = "form-select mx-3 w-20";
+                document.querySelectorAll('form[name="accept"]').forEach(a => {
+                    a.addEventListener('submit', (ev) => {
+                        ev.preventDefault();
+                        $.ajax({
+                            url: a.action,
+                            method: 'POST',
+                            success: (res) => {
+                                let message = document.getElementById('message');
+                                message.classList = "text-success";
+                                message.innerText = res.message;
+                                table.clear().draw();
+
+                            }, error: (res) => {
+                                message.classList = "text-danger";
+                                message.innerText = res.responseJSON.message
+                            }
+                        })
+                    })
+                })
+                document.querySelectorAll('form[name="delete"]').forEach((a) => {
+                    a.addEventListener('submit', (ev) => {
+                        ev.preventDefault();
+                        $.ajax({
+                            url: a.action,
+                            method: 'POST',
+                            success: (res) => {
+                                let message = document.getElementById('message');
+                                if (res.status === 200) {
+                                    message.classList = "text-success"
+                                    message.innerText = res.message
+                                    $('#table').DataTable().ajax.reload();
+                                }
+                            }
+
+                        })
+                    })
+                })
+                document.getElementById('filter').addEventListener('change', () => {
+                    $('#table').DataTable().ajax.reload();
+                })
+
+            })
+
+        })
+

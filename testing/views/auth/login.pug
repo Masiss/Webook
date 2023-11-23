@@ -1,0 +1,41 @@
+doctype html
+html
+    head
+        link(rel='stylesheet', href='/css/bootstrap.css')
+        script(type="text/javascript" href='/jquery.js')
+        script(type="text/javascript" src='/js/bootstrap.bundle.js')
+        script(type="text/javascript" src='/javascripts/sidebarmenu.js')
+        script(type="text/javascript" src='/javascripts/app.min.js')
+        script(type="text/javascript" src='/simplebar.js')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+
+    body
+        div(class="page-wrapper"
+            id="main-wrapper"
+            data-layout="vertical"
+            data-navbarbg="skin6"
+            data-sidebartype="full"
+            data-sidebar-position="fixed"
+            data-header-position="fixed")
+            div(class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center"
+            )
+                div(class="d-flex align-items-center justify-content-center w-100")
+                    div(class="row justify-content-center w-100")
+                        div(class="col-md-8 col-lg-6 col-xxl-3")
+                            div(class="card mb-0")
+                                div(class="card-body")
+                                    a(href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100")
+                                        img(src="../assets/images/logos/dark-logo.svg" width="180" alt="")
+                                    p(class="text-center h2") Đăng nhập đê
+                                    form
+                                        div.mb-3
+                                            label.form-label(for="email")
+                                            input#email.form-control(type="email")
+                                        div.mb-4
+                                            label.form-label(for="password")
+                                            input#password.form-control(type="password")
+                                        div.d-flex.align-items-center.justify-content-center.mb-4
+                                            div.form-check
+                                                input#saveLogin.form-check-input.primary(type="checkbox" value="" checked)
+                                                label.form-check-label.text-dark(for="saveLogin") Lưu đăng nhập
+                                        button.btn.btn-primary.w-100 Đăng nhập này

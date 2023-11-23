@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_home"
+        android:icon="@drawable/outline_home_24"
+        android:title="Home" />
+<!--    <item-->
+<!--        android:id="@+id/item_book"-->
+
+<!--        android:icon="@drawable/outline_menu_book_24"-->
+<!--        android:title="Book" />-->
+    <item
+        android:id="@+id/item_search"
+
+        android:icon="@drawable/outline_search_24"
+        android:title="Search" />
+    <item
+        android:id="@+id/item_person"
+
+        android:icon="@drawable/outline_person_24"
+        android:title="Profile" />
+
+</menu>

@@ -1,0 +1,77 @@
+extends ../layout
+
+block content
+    div.card
+        div.card-header
+            button.btn.btn-dark(onclick="window.history.back()" type="button") Trở về
+        div.card-body
+            span.h1 #{user.username}
+            p.card-text Email: !{user.email}
+            div.mt-5
+                p.card-text Số dư: !{user.balance}
+                p.card-text Số điện thoại: !{user.phone}
+                div.d-flex.justify-content-around
+                    button.btn.btn-primary.my-5(type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#updateBalance") Cập nhật số dư
+    div.card
+        div.card-header
+            h3.h3.card-title Sách đã mua
+        div.card-body
+            table.table
+                thead
+                    tr
+                        th Sách
+                        th Thời gian mua
+                tbody
+                    each purchase in purchase_log
+                        tr
+                            td=purchase.book
+                            td=purchase.time
+
+
+
+
+    .modal.fade#updateBalance(tabindex="-1")
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h5.modal-title Cập nhật số dư người dùng
+                    button.btn-close(type="button"
+                        data-bs-dismiss="modal")
+                .modal-body
+                    p.w-100#message
+                    div
+                        label.form-label(for="balance") Số dư
+                        input.form-control#balance(type="number")
+                .modal-footer
+                    button.btn.btn-secondary(type="button"
+                        data-bs-dismiss="Close") Đóng
+                    button.btn.btn-primary#submit(type="button") Cập nhật
+
+
+    script.
+        document.getElementById('submit').addEventListener('click', (ev) => {
+            ev.preventDefault();
+            if (!document.getElementById('balance').value.trim().length) {
+                return;
+            }
+            $.ajax({
+                url: './updateBalance',
+                method: 'POST',
+                data: {
+                    balance: () => {
+                        return document.getElementById('balance').value
+                    }
+                },
+                success: (res) => {
+                    document.getElementById('message').classList.add('text-success')
+                    document.getElementById('message').innerText = res.message;
+                },
+                error: (res) => {
+                    document.getElementById('message').classList.add('text-danger')
+                    document.getElementById('message').innerText = res.responseJSON.message;
+                }
+
+            })
+        })

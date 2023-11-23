@@ -1,0 +1,9 @@
+extends ../layout
+block content
+    div.card
+        div.card-header
+            button.btn.btn-dark(onclick="window.history.back()" type="button") Trở về
+        div.card-body
+            div
+                iframe(width=1200 height=800 src=content )
+

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kPrimary"
+    android:orientation="vertical"
+    tools:context=".SignUpActivity">
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="80dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/logo_book" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="28dp"
+        android:background="@color/kGreen"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="@color/white"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/kGreen"
+
+            android:hint="Email" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="28dp"
+        android:background="@color/kGreen"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="@color/white"
+
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/kGreen"
+            android:hint="Số điện thoại" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="28dp"
+        android:background="@color/kGreen"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="@color/white"
+
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/kGreen"
+            android:hint="Tài khoản" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--mat khau-->
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="28dp"
+        android:background="@color/kGreen"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="@color/white"
+
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/kGreen"
+            android:hint="Mật khẩu"
+
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    nhap lai mat khau-->
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="28dp"
+        android:background="@color/kGreen"
+        android:textColorHint="@color/black"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="@color/white"
+
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_confirmPass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/kGreen"
+            android:hint="Nhập lại mật khẩu"
+
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="26dp" />
+
+
+    <Button
+        android:id="@+id/btn_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/kGreen"
+        android:text="Đăng ký"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/txt_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="Bạn đã có tài khoản? Đăng nhập"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

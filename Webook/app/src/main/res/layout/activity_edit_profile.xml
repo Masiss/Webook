@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kPrimary"
+    android:orientation="vertical"
+    tools:context=".EditProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/outline_arrow_back_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="CẬP NHẬT THÔNG TIN CÁ NHÂN"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+<!--    <Space-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="30dp" />-->
+
+    <!--    fix image cricle-->
+<!--    <ImageView-->
+
+<!--        android:layout_width="86dp"-->
+<!--        android:layout_height="86dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:src="@drawable/user" />-->
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="HỌ VÀ TÊN"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/no_border_input"
+        android:text="Nguyen Van A"
+        android:textColor="@color/white" />
+
+    <!--    <Space-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="18dp" />-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginHorizontal="18dp"-->
+    <!--        android:text="NGÀY SINH"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="13sp" />-->
+
+
+    <!--    <EditText-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginHorizontal="18dp"-->
+    <!--        android:background="@drawable/no_border_input"-->
+    <!--        android:text="14-08-2002"-->
+    <!--        android:textColor="@color/white" />-->
+
+    <!--    &lt;!&ndash;    gioi tinh&ndash;&gt;-->
+    <!--    <Space-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="18dp" />-->
+
+
+    <!--    <RadioGroup-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginHorizontal="18dp"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:weightSum="1">-->
+
+    <!--        <RadioButton-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginRight="5dp"-->
+    <!--            android:layout_weight=".5"-->
+    <!--            android:background="@drawable/no_border_input"-->
+    <!--            android:buttonTint="@color/white"-->
+    <!--            android:layoutDirection="rtl"-->
+    <!--            android:text="NỮ"-->
+    <!--            android:textColor="@color/white" />-->
+
+    <!--        <RadioButton-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginLeft="5dp"-->
+    <!--            android:layout_weight=".5"-->
+    <!--            android:background="@drawable/no_border_input"-->
+    <!--            android:layoutDirection="rtl"-->
+    <!--            android:text="NAM"-->
+    <!--            android:textColor="@color/white" />-->
+
+    <!--    </RadioGroup>-->
+
+
+    <!--        <RadioButton-->
+    <!--            android:id="@+id/radioButton"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Nam" />-->
+
+    <!--        <RadioButton-->
+    <!--            android:id="@+id/radioButton2"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Nữ" />-->
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="SỐ ĐIỆN THOẠI"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/no_border_input"
+        android:inputType="phone"
+        android:text="09879999"
+        android:textColor="@color/white" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="EMAIL"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/no_border_input"
+        android:inputType="textEmailAddress"
+        android:text="abc@gmail.com"
+        android:textColor="@color/white" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginHorizontal="18dp"-->
+    <!--        android:text="ĐỊA CHỈ"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="13sp" />-->
+
+
+    <!--    <EditText-->
+    <!--        android:layout_width="match_parent"-->
+
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginHorizontal="18dp"-->
+    <!--        android:background="@drawable/no_border_input"-->
+    <!--        android:inputType="textPhonetic"-->
+    <!--        android:text="Lê Duẩn, Quận 1, Tp Hồ Chí Minh"-->
+    <!--        android:textColor="@color/white" />-->
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="26dp" />
+
+    <TextView
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/green_border"
+        android:padding="11dp"
+        android:text="HOÀN TẤT"
+        android:textAlignment="center"
+        android:textColor="@color/kLightGreen"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+</LinearLayout>

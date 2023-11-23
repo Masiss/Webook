@@ -1,0 +1,48 @@
+extends ../layout
+
+block content
+    div.card
+        div.card-header
+            button.btn.btn-dark(onclick="window.history.back()" type="button") Trở về
+        div.card-body
+            p.w-100.text-danger#message
+            span.h1 #{book.title}
+            p.card-text=book.author
+            img.img-fluid.float-end(src=book.image width=300 height=350)
+            div.mt-5
+                p.card-text=book.price
+                p.card-text Mô tả sách: !{book.description}
+                p.card-text Số lượng đã bán: !{book.sold}
+                p.card-title Các chương:
+                if(book.chapter)
+                    ul.ms-3
+                        each chap in book.chapter
+                            li !{chap}
+                else
+                    span.card-text Chưa có chương nào được thêm vào
+                div.d-flex.justify-content-around
+                    a.btn.btn-primary.my-5(href="./edit") Cập nhật
+                    //a.btn.btn-primary.my-5#read(href=!book.content ? "#" : "./read") Đọc
+                    a.btn.btn-outline-indigo.my-5#read(href="./read" onclick=book.content ? "" : "readClick(event)") Đọc
+                    a.btn.btn-outline-dark.my-5#publish(href=!book.is_published ? "./publish" : "javascript:void(0)") Đăng
+
+    script.
+        function readClick(ev) {
+            ev.preventDefault();
+            document.getElementById('message').innerText = "Sách này chưa có nội dung";
+            return false;
+        }
+        document.getElementById('publish').addEventListener('click', (ev) => {
+            ev.preventDefault();
+            let message = document.getElementById('message');
+            $.ajax({
+                url: ev.target.href,
+                method: 'POST',
+                success: (res) => {
+                    message.innerText = res.message;
+                },
+                error: (res) => {
+                    message.innerText = res.responseText
+                }
+            })
+        })

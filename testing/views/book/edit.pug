@@ -1,0 +1,78 @@
+extends ../layout
+block content
+    div.card
+        div.card-header
+            p.card-title.h2 Cập nhật sách
+        div.card-body
+            form(action="./update" method="POST" enctype="multipart/form-data")
+                div
+                    div.mx-3.my-3
+                        label.form-label.h6(for="title") Tiêu đề
+                        input.form-control#title(name="title" type="text" value=book.title)
+                    div.mx-3.my-3
+                        label.form-label.h6(for="price") Giá
+                        input.form-control#price(name="price" type="number" value=book.price)
+                    div.mx-3.my-3
+                        label.form-label.h6(for="description") Mô tả
+                        input.form-control#description(name="description" type="text" value=book.description)
+                    div.mx-3.my-3
+                        label.form-label.h6(for="author") Tên tác giả
+                        input.form-control#author(name="author" type="text" value=book.author)
+                    div#chapter.flex.col.mx-3.my-3
+                        label.form-label.h6(for="chapter") Chương
+                        if(book.chapter)
+                            each chap in book.chapter
+                                div.d-flex.my-3(name="chap")
+                                    input.form-control.w-50(name="chapter[]" type="text" value=chap)
+
+                                button.btn.icon-link(name="deleteChap" type="button") Xoá
+                                button.btn.btn-primary(name="addChap" type="button") Thêm
+                        else
+                            div.d-flex.my-3(name="chap")
+                                input.form-control.w-50(name="chapter[]" type="text" value=chap)
+
+                            button.btn.icon-link(name="deleteChap" type="button") Xoá
+                            button.btn.btn-primary(name="addChap" type="button") Thêm
+                    div.mx-3.my-3
+                        label.form-label.h6(for="image") Hình
+                        input.form-control#image(name="image" type="file" accept="image/*" onchange="loadFile(event)")
+                        img.img-fluid.my-3(src=book.image width=200)
+                        label.form-label(for="output") Hình mới-->
+                        img.img-fluid.my-3(width=200)#output
+
+                    div.mx-3.my-3
+                        label.form-label.h6(for="content") Nội dung (PDF)
+                        input.form-control#content(name="content" type="file" accept="application/pdf")
+                    button.btn.btn-primary.mx-3.my-3(type="submit") Cập nhật sách
+
+    script.
+        let chapter = document.getElementById('chapter')
+        document.querySelectorAll('button[name="addChap"]').forEach((a) => {
+            a.addEventListener('click', (event) => {
+                event.preventDefault();
+                chapter.appendChild(document.querySelector('div[name="chap"]').cloneNode(true));
+                // chapter.appendChild(document.querySelector('input[name="chapter[]"]').cloneNode(true));
+
+
+            });
+        })
+
+        document.querySelectorAll('button[name="deleteChap"]').forEach((a) => {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                a.parentNode.parentNode.removeChild(a.parentNode);
+            })
+        })
+        var loadFile = function (event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var output = document.getElementById('output');
+                output.src = reader.result;
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        };
+
+
+
+
+

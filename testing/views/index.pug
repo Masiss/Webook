@@ -1,0 +1,127 @@
+extends layout
+
+block content
+    div.card
+        div.card-header
+            span.card-title Thống kê số sách bán trong tuần
+        div.card-body
+            div
+                canvas#weekChart
+    div.my-3.card
+        div.card-header
+            span.card-title Thống kê số sách bán trong tháng
+        div.card-body
+            div
+                canvas#monthChart
+    div.my-3.card
+        div.card-header
+            span.card-title Số người dùng mới
+        div.card-body
+            div
+                canvas#user
+
+
+
+
+    script(type="text/javascript" src='chart.js/dist/chart.umd.js')
+    script.
+        (async () => {
+            var fromServer = await fetch('/index', {
+                method: 'POST',
+            }).then(async (res) => {
+                await res.json().then((resJSON) => {
+                    console.log(resJSON);
+                    let data = [];
+                    let dataUser = [];
+                    let labels = []
+                    let labelsUser = []
+                    let data1 = []
+                    resJSON.book.forEach(a => {
+                        labels.push(Object.keys(a)[0]);
+                        data.push(a[Object.keys(a)[0]].quantity);
+                        data1.push(a[Object.keys(a)[0]].revenue);
+                    })
+                    resJSON.user.forEach(a => {
+                        labelsUser.push(Object.keys(a)[0]);
+                        dataUser.push(a[Object.keys(a)[0]]);
+                    })
+                    let weekData = data.slice(new Date().getDate() - new Date().getDay() - 1, new Date().getDate() - new Date().getDay() + 6),
+                        weekLabels = labels.slice(new Date().getDate() - new Date().getDay() - 1, new Date().getDate() - new Date().getDay() + 6);
+                    new Chart(document.getElementById('weekChart'), {
+                        type: 'line',
+                        data: {
+                            datasets: [
+                                {
+                                    data: weekData,
+                                    label: 'Số sách bán trong ngày',
+                                    fill: false,
+                                    borderColor: 'rgb(75, 192, 192)',
+                                    tension: 0.1
+                                },
+
+                            ],
+                            labels: weekLabels
+                        }
+                    })
+                    new Chart(document.getElementById('monthChart'), {
+                        type: 'line',
+                        data: {
+                            datasets: [
+                                {
+                                    data: data,
+                                    label: 'Số sách bán trong ngày',
+                                    fill: false,
+                                    borderColor: 'rgb(75, 192, 192)',
+                                    tension: 0.1,
+                                    yAxisID: 'y'
+                                },
+                                {
+                                    data: data1,
+                                    label: 'Doanh thu theo ngày',
+                                    fill: false,
+                                    borderColor: 'red',
+                                    tension: 0.1,
+                                    yAxisID: 'y1'
+                                }
+                            ],
+                            labels: labels
+                        },
+                        options: {
+                            responsive: true,
+                            stacked: false,
+                            scales: {
+                                y: {
+                                    type: 'linear',
+                                    display: true,
+                                    position: 'left'
+                                },
+                                y1: {
+                                    type: 'linear',
+                                    display: true,
+                                    position: 'right',
+                                    grid: {
+                                        drawOnChartArea: false
+                                    }
+                                }
+                            }
+                        }
+                    })
+                    new Chart(document.getElementById('user'), {
+                        type: 'line',
+                        data: {
+                            datasets: [
+                                {
+                                    data: dataUser,
+                                    label: 'Lượng người dùng mới',
+                                    fill: false,
+                                    borderColor: 'rgb(75, 192, 192)',
+                                    tension: 0.1
+                                }
+                            ],
+                            labels: labelsUser
+                        }
+                    })
+                })
+            })
+        })();
+

@@ -1,0 +1,8 @@
+extends ../layout
+    block content
+        div.card
+            div.card-body
+                form(action="./import" method="post" enctype="multipart/form-data")
+                    div
+                        label.form-label(for="file") Chọn file
+                        input.form-control#file(type="file" name="file")

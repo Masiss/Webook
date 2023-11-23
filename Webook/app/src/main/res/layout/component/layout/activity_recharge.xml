@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kPrimary"
+    android:orientation="vertical"
+    tools:context=".RechargeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/outline_arrow_back_24"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="NẠP TIỀN"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Chuyển số tiền muốn nạp vào số tài khoản MOMO bên dưới "
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="Số tài khoản"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/no_border_input"
+        android:text="0987835378"
+        android:textColor="@color/white"
+        android:textIsSelectable="true" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Và nhập mã giao dịch tại đây"
+        android:textColor="@color/white" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="Mã giao dịch"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+
+    <EditText
+        android:id="@+id/edt_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/no_border_input"
+        android:inputType="phone"
+        android:text="Mã giao dịch..."
+        android:textColor="@color/white" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="Số tiền"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+
+    <EditText
+        android:id="@+id/edt_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/no_border_input"
+        android:inputType="phone"
+        android:text="Số tiền..."
+        android:textColor="@color/white"
+        android:digits="1234567890"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="18dp" />
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginHorizontal="18dp"-->
+    <!--        android:text="ĐỊA CHỈ"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="13sp" />-->
+
+
+    <!--    <EditText-->
+    <!--        android:layout_width="match_parent"-->
+
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginHorizontal="18dp"-->
+    <!--        android:background="@drawable/no_border_input"-->
+    <!--        android:inputType="textPhonetic"-->
+    <!--        android:text="Lê Duẩn, Quận 1, Tp Hồ Chí Minh"-->
+    <!--        android:textColor="@color/white" />-->
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="26dp" />
+
+    <TextView
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/green_border"
+        android:padding="11dp"
+        android:text="HOÀN TẤT"
+        android:textAlignment="center"
+        android:textColor="@color/kLightGreen"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+</LinearLayout>

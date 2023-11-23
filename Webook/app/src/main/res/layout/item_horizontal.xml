@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_marginHorizontal="18dp"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
+        android:background="@drawable/image_rounded_border"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/the_roi_mot_mua_he" />
+
+    <Space
+        android:layout_width="10dp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight=".8"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thế rồi một mùa hè"
+            android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="6dp" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tác giả: Phan Mạnh Cường"
+            android:textColor="@color/kLightText" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Mô tả: Chuyện về mùa hè năm 1986"
+            android:textColor="@color/kLightText" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Webook</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_detail_book">DetailBookActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="dau_tien_ho_giet_cha_toi_des">\"Lần đầu tiên họ giết cha tôi\" (2006) là hồi ký của Loung Ung về những trải nghiệm thời thơ ấu của cô khi sống dưới chế độ Khmer Đỏ tàn bạo ở Campuchia trong những năm 1970. Cô bắt đầu câu chuyện của mình khi Khmer Đỏ nắm quyền, buộc gia đình cô phải chạy trốn khỏi thủ đô Phnom Penh của đất nước, cô thấy mình sống như những người lao động nô lệ, thường xuyên lo sợ rằng sẽ là mục tiêu cá nhân của chế độ.</string>
+    <string name="chapter_1">Trong Chiến tranh Việt Nam, chiến sự bắt đầu lan sang nước láng giềng Campuchia khi quân đội Hoa Kỳ ném bom lực lượng Bắc Việt đang trú ẩn ở lãnh thổ trung lập này, làm khơi mào cuộc nội chiến ở quốc gia này. \n\nSau đó, Mỹ rút quân khỏi Campuchia và di tản đại sứ quán của họ. Một sĩ quan của Lực lượng Vũ trang Quốc gia Khmer tên Ung, được bảy đứa con của mình (trong đó có Loung Ung, 5 tuổi) gọi là \"Pa\", tỏ ra hối tiếc vì đã tin tưởng người Mỹ khi quân Khmer Đỏ bắt đầu hoành hành. Khmer Đỏ buộc tất cả các gia đình phải rời khỏi thành phố với lý do quân Mỹ sẽ ném bom, rồi đưa họ vào đoàn người tị nạn.\n\n Khi bị binh lính thẩm vấn, Pa Ung bác bỏ lời cáo buộc cho rằng anh làm việc cho chính phủ, và biết rằng nếu bọn chúng phát hiện ra thì anh sẽ bị tử hình. Gia đình Pa được \"Cậu\", em rể của Pa, tìm thấy và sống chung với gia đình Cậu một thời gian. Tuy nhiên, trước sự van nài của vợ Cậu, cũng như lo sợ bị liên lụy nếu danh tính của Pa bị lộ, nên gia đình Loung đành phải ra đi. Sau nhiều ngày di chuyển, họ bị lính Khmer Đỏ vây bắt và đưa đến một trại lao động cùng nhiều người tị nạn khác, nơi họ phải xây dựng chòi trú ẩn của riêng mình và buộc phải làm việc trong điều kiện khắc nghiệt. Tài sản của họ bị tịch thu, lương thực trở nên khan hiếm vì tất cả đều được đưa đến các đơn vị chiến đấu, đồng thời những người tìm cách lấy thêm lương thực thì bị đánh đập dã man. Ngoài công việc lao động khổ sai, trại còn rao giảng về chế độ Khmer Đỏ, ngoài ra bất kỳ đồ dùng ngoại lai nào (kể cả thuốc men) cũng đều bị cấm và người sở hữu chúng sẽ bị kết án tử. Hai anh chị cả của Loung bị chuyển đến các trại khác, không lâu sau đó người chị chết vì bệnh tật và đói khát.</string>
+</resources>

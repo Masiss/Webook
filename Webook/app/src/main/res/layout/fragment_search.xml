@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kPrimary"
+    android:orientation="vertical"
+    tools:context=".fragment.SearchFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:layout_marginBottom="8dp"
+                android:text="TÌM KIẾM"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/border_search_input"
+                android:drawableStart="@drawable/outline_search_24"
+                android:drawableTint="@color/white"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textColor="@color/white" />
+
+<!--            <GridLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="16dp"-->
+<!--                android:layout_marginTop="14dp"-->
+<!--                android:layout_marginBottom="22dp"-->
+<!--                android:alignmentMode="alignBounds"-->
+<!--                android:columnCount="3"-->
+<!--                android:useDefaultMargins="true">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:background="@drawable/blue_background"-->
+<!--                    android:backgroundTint="@color/kDarkGreen"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight=".9"-->
+<!--                        android:text="Lịch sử"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <Space-->
+<!--                        android:layout_width="14dp"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:src="@drawable/ic_history" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:background="@drawable/blue_background"-->
+<!--                    android:backgroundTint="@color/kDarkGreen"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight=".9"-->
+<!--                        android:text="Văn hóa"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <Space-->
+<!--                        android:layout_width="14dp"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:src="@drawable/ic_culture" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:background="@drawable/blue_background"-->
+<!--                    android:backgroundTint="@color/kDarkGreen"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight=".9"-->
+<!--                        android:text="Tâm lý\nhọc"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <Space-->
+<!--                        android:layout_width="14dp"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:src="@drawable/ic_psychology" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:background="@drawable/blue_background"-->
+<!--                    android:backgroundTint="@color/kDarkGreen"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight=".9"-->
+<!--                        android:text="Kinh dị"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <Space-->
+<!--                        android:layout_width="14dp"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:src="@drawable/ic_horror" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:background="@drawable/blue_background"-->
+<!--                    android:backgroundTint="@color/kDarkGreen"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight=".9"-->
+<!--                        android:text="Sức khỏe"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <Space-->
+<!--                        android:layout_width="14dp"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:src="@drawable/ic_health" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:background="@drawable/blue_background"-->
+<!--                    android:backgroundTint="@color/kDarkGreen"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight=".9"-->
+<!--                        android:text="Trinh\nthám"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <Space-->
+<!--                        android:layout_width="14dp"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:src="@drawable/ic_thriller" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:background="@drawable/blue_background"-->
+<!--                    android:backgroundTint="@color/kDarkGreen"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight=".9"-->
+<!--                        android:text="Ngôn\ntình"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <Space-->
+<!--                        android:layout_width="14dp"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:src="@drawable/ic_novel" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:background="@drawable/blue_background"-->
+<!--                    android:backgroundTint="@color/kDarkGreen"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight=".9"-->
+<!--                        android:text="Đầu tư"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <Space-->
+<!--                        android:layout_width="14dp"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:src="@drawable/ic_investment" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:background="@drawable/blue_background"-->
+<!--                    android:backgroundTint="@color/kDarkGreen"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight=".9"-->
+<!--                        android:text="Khoa học"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <Space-->
+<!--                        android:layout_width="14dp"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:src="@drawable/ic_scientific" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:background="@drawable/blue_background"-->
+<!--                    android:backgroundTint="@color/kDarkGreen"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight=".9"-->
+<!--                        android:text="Hài hước"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <Space-->
+<!--                        android:layout_width="14dp"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:src="@drawable/ic_comedy" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:background="@drawable/blue_background"-->
+<!--                    android:backgroundTint="@color/kDarkGreen"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight=".9"-->
+<!--                        android:text="Bí ẩn"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <Space-->
+<!--                        android:layout_width="14dp"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:src="@drawable/ic_mistery" />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:background="@drawable/blue_background"-->
+<!--                    android:backgroundTint="@color/kDarkGreen"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:weightSum="1">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_weight=".9"-->
+<!--                        android:text="Giả tưởng"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="12sp" />-->
+
+<!--                    <Space-->
+<!--                        android:layout_width="14dp"-->
+<!--                        android:layout_height="wrap_content" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="28dp"-->
+<!--                        android:layout_height="36dp"-->
+<!--                        android:src="@drawable/ic_fictionary" />-->
+<!--                </LinearLayout>-->
+<!--            </GridLayout>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:text="SÁCH ĐỀ XUẤT"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="vertical"
+                android:paddingVertical="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/suggestRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

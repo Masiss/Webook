@@ -1,0 +1,58 @@
+extends ../layout
+block content
+    div.card
+        div.card-header
+            p.card-title.h2 Thêm sách
+        div.card-body
+            form(action="./store" method="POST" enctype="multipart/form-data")
+                div
+                    div.mx-3.my-3
+                        label.form-label.h6(for="title") Tiêu đề
+                        input.form-control#title(name="title" type="text")
+                    div.mx-3.my-3
+                        label.form-label.h6(for="price") Giá
+                        input.form-control#price(name="price" type="number")
+                    div.mx-3.my-3
+                        label.form-label.h6(for="description") Mô tả
+                        input.form-control#description(name="description" type="text")
+                    div.mx-3.my-3
+                        label.form-label.h6(for="author") Tên tác giả
+                        input.form-control#author(name="author" type="text")
+                    div#chapter.flex.col.mx-3.my-3
+                        label.form-label.h6(for="chapter") Chương
+                        input.form-control(name="chapter[]" type="text")
+                        button.btn.btn-primary#addChap Thêm
+                    div.mx-3.my-3
+                        label.form-label.h6(for="image") Hình
+                        input.form-control#image(name="image" type="file" accept="image/jpeg|png")
+                    div.mx-3.my-3
+                        label.form-label.h6(for="content") File sách (PDF)
+                        input.form-control#content(name="content" type="file" accept="application/pdf")
+                    button.btn.btn-primary.mx-3.my-3(type="submit") Thêm sách
+    div.card.my-5
+        div.card-header
+            p.card-title Thêm bằng file Excel
+        div.card-body
+            form(action="./import" method="post" enctype="multipart/form-data")
+                div
+                    label.form-label(for="file") Chọn file
+                    input.form-control#file(type="file" name="file" accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,.csv")
+                button.btn.btn-primary.my-3(type="submit") Thêm
+
+
+
+
+    script.
+        let chapter = document.getElementById('chapter'),
+            addChap = document.getElementById('addChap');
+        addChap.addEventListener('click', (event) => {
+            event.preventDefault();
+            let node = document.createElement('input');
+            node.name = "chapter[]";
+            node.classList = "form-control";
+            chapter.appendChild(node);
+        });
+
+
+
+

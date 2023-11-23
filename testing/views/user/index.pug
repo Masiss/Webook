@@ -1,0 +1,77 @@
+extends ../layout
+
+block content
+
+    .containter.m-5
+        .card
+            .card-header
+                span.card-title Quản lí người dùng
+            .card-body
+                div.d-flex.flex-row.justify-content-between.mt-3.mb-5.ms-3
+                    a.btn.btn-primary.align-content-center.my-auto(href="./create") Thêm người dùng
+
+                table#table.table
+                    thead
+                        tr
+                            th Tên người dùng
+                            th Email
+                            th Số điện thoại
+                            th Số dư
+                            th
+                            th
+                    tbody#tbody
+
+    script(type="text/javascript" src="/jquery.js")
+    //link(rel="stylesheet" src="/css/jquery.dataTables.css")
+    script(type="text/javascript" src="/js/jquery.dataTables.js")
+
+    script.
+
+
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+
+        $(document).ready(() => {
+            // $.noConflict();
+            let table = $('#table').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "processing": true,
+                "ajax": {
+                    "url": '/user/',
+                    "type": 'POST',
+                    "data": "JSON",
+                    dataSrc: ""
+                },
+                columns: [
+
+                    {"data": 'username'},
+                    {"data": 'email'},
+                    {"data": 'phone'},
+                    {"data": 'balance'},
+                    {
+                        "data": 'id',
+                        render: (data) => {
+                            return '<a class="btn btn-info" href="/user/' + data + '/detail">Chi tiết</a>'
+                        }
+                    },
+                    {
+                        "data": 'id',
+                        render: (data) => {
+                            return '<form action="/user/' + data + '/delete" method="POST">' +
+                                '<input hidden="hidden" value="' + data + '"/> ' +
+                                '<button class="btn btn-danger" type="submit">Xoá' +
+                                '</button></form>';
+                        }
+                    }
+                ]
+            }).draw();
+            document.querySelector("#table_filter label input").classList = "form-control ms-3 w-25";
+            document.querySelector("#table_filter label").classList = "card-text d-flex my-3 align-items-center";
+            document.querySelector("#table_length label").classList = "card-text d-flex my-3 align-items-center";
+            document.querySelector("#table_length label select").classList = "form-select mx-3 w-20";
+        })
+
+
