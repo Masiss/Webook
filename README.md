@@ -6,7 +6,7 @@
 - Bootstrap.
 - Firebase Storage, Firebase Firestore.
 - ...
-## Các chức năng:
+## 2. Các chức năng:
 ### Người dùng (App Android):
 - Mua sách.
 - Nạp tiền (chuyển khoản Momo và nhập mã giao dịch để được kiểm tra và chấp nhận)
@@ -19,5 +19,5 @@
 - Xử lí các yêu cầu quên mật khẩu.
 - Thay đổi số dư người dùng.
 - Không có đăng ký và đăng nhập.
-## Thiết kế DB:
+## 3. Thiết kế DB:
 ![.](/db.png)
