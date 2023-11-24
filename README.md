@@ -1,4 +1,11 @@
 # Webook - App bán sách ebook:
+## 1. Công nghệ được sử dụng:
+- JavaScript, NodeJS, ExpressJS.
+- Java (Android).
+- HTML, CSS.
+- Bootstrap.
+- Firebase Storage, Firebase Firestore.
+- ...
 ## Các chức năng:
 ### Người dùng (App Android):
 - Mua sách.
