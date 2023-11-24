@@ -2,7 +2,7 @@
 ## 1. Công nghệ được sử dụng:
 - JavaScript, NodeJS, ExpressJS.
 - Java (Android).
-- HTML, CSS.
+- Pug, CSS.
 - Bootstrap.
 - Firebase Storage, Firebase Firestore.
 - ...
