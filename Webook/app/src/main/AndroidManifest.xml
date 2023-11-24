@@ -30,15 +30,11 @@
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
         <!-- </activity> -->
-        <activity
-            android:name=".SubscriptionActivity"
-            android:exported="false" />
+
         <activity
             android:name=".EditProfileActivity"
             android:exported="false" />
-        <activity
-            android:name=".ListChapterActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ChapterActivity"
             android:exported="false" />
@@ -48,18 +44,11 @@
         <activity
             android:name=".ListBookActivity"
             android:exported="false" />
-        <activity
-            android:name=".PopularBooksActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ReadingBooksActivity"
             android:exported="false" />
-        <activity
-            android:name=".NewestBooksActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SavedBooksActivity"
-            android:exported="false" />
+
         <activity
             android:name=".SignInActivity"
             android:exported="false" />
