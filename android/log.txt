@@ -1,0 +1,72 @@
+11-08 05:48:27.310  1675  2304 E OpenGLRenderer: Unable to match the desired swap behavior.
+11-08 05:48:27.381  1128  1669 E OpenGLRenderer: Unable to match the desired swap behavior.
+11-08 05:48:27.455  1396  1396 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():159 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+11-08 05:48:27.457  5809  5809 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=ImeCallback=ImeOnBackInvokedCallback@262027413 Callback=android.window.IOnBackInvokedCallback$Stub$Proxy@20d1e2f
+11-08 05:48:27.459   560  1514 W AppSearchIcing: icing-search-engine.cc:283: Error: 5, Message: Document (com.google.android.googlequicksearchbox$OneSearchZeroStateGoogleSuggestions/default, zp) not found.
+11-08 05:48:27.511  1675  1675 W A       : Can't get WAA status for Mavatar!
+11-08 05:48:27.511  1675  1675 W A       : java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.apps.tiktok.dataservice.z.b(PG:1)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.apps.tiktok.dataservice.at.a(PG:1)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.apps.tiktok.tracing.ec.a(PG:2)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.common.util.concurrent.aj.a(PG:2)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.common.util.concurrent.ac.apply(PG:1)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.common.util.concurrent.h.e(PG:2)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.common.util.concurrent.j.run(PG:9)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.common.util.concurrent.bf.execute(PG:1)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.common.util.concurrent.d.i(PG:1)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.common.util.concurrent.d.l(PG:12)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.common.util.concurrent.d.n(PG:2)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.common.util.concurrent.i.f(PG:1)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.common.util.concurrent.j.run(PG:12)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.android.libraries.i.ae.run(PG:1)
+11-08 05:48:27.511  1675  1675 W A       :      at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-08 05:48:27.511  1675  1675 W A       :      at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.android.libraries.i.k.run(PG:2)
+11-08 05:48:27.511  1675  1675 W A       :      at com.google.android.libraries.i.p.run(PG:4)
+11-08 05:48:27.511  1675  1675 W A       :      at java.lang.Thread.run(Thread.java:1012)
+11-08 05:48:27.521  5809  5809 W FrameTracker: Missed SF frame:PREDICTION_ERROR, 108384, 0, CUJ=J<IME_INSETS_ANIMATION::0@0@com.example.webook>
+11-08 05:48:27.521  5809  5809 W FrameTracker: Missed SF frame:PREDICTION_ERROR, 108406, 0, CUJ=J<IME_INSETS_ANIMATION::0@0@com.example.webook>
+11-08 05:48:27.521  5809  5809 W FrameTracker: Missed SF frame:PREDICTION_ERROR, 108428, 0, CUJ=J<IME_INSETS_ANIMATION::0@0@com.example.webook>
+11-08 05:48:27.521  5809  5809 W FrameTracker: Missed SF frame:PREDICTION_ERROR, 108450, 0, CUJ=J<IME_INSETS_ANIMATION::0@0@com.example.webook>
+11-08 05:48:27.521  5809  5809 W FrameTracker: Missed SF frame:PREDICTION_ERROR, 108472, 0, CUJ=J<IME_INSETS_ANIMATION::0@0@com.example.webook>
+11-08 05:48:27.521  5809  5809 W FrameTracker: Missed SF frame:PREDICTION_ERROR, 108494, 0, CUJ=J<IME_INSETS_ANIMATION::0@0@com.example.webook>
+11-08 05:48:27.521  5809  5809 W FrameTracker: Missed SF frame:PREDICTION_ERROR, 108516, 0, CUJ=J<IME_INSETS_ANIMATION::0@0@com.example.webook>
+11-08 05:48:27.521  5809  5809 W FrameTracker: Missed SF frame:PREDICTION_ERROR, 108538, 0, CUJ=J<IME_INSETS_ANIMATION::0@0@com.example.webook>
+11-08 05:48:27.521  5809  5809 W FrameTracker: Missed SF frame:PREDICTION_ERROR, 108560, 0, CUJ=J<IME_INSETS_ANIMATION::0@0@com.example.webook>
+11-08 05:48:27.522  5809  5809 W FrameTracker: Missed SF frame:PREDICTION_ERROR, 108582, 0, CUJ=J<IME_INSETS_ANIMATION::0@0@com.example.webook>
+11-08 05:48:27.522  5809  5809 W FrameTracker: Missed SF frame:PREDICTION_ERROR, 108604, 0, CUJ=J<IME_INSETS_ANIMATION::0@0@com.example.webook>
+11-08 05:48:27.522  5809  5809 W FrameTracker: Missed App frame:JANK_APP_DEADLINE_MISSED, 108633, 0, CUJ=J<IME_INSETS_ANIMATION::0@0@com.example.webook>
+11-08 05:48:27.686  5809  5809 W FrameTracker: Missed SF frame:PREDICTION_ERROR, 109338, 0, CUJ=J<IME_INSETS_ANIMATION::1@0@com.example.webook>
+11-08 05:48:27.744  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:27.834  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:27.836  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:27.841  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:27.851  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:27.852  2335  2549 W BugleRcsEngine: [47] bpxc.w: Unable to send diagnostic log
+11-08 05:48:27.859  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:27.869  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:27.871  2335  2549 W BugleRcsEngine: [47] bpxc.w: Unable to send diagnostic log
+11-08 05:48:27.889  2335  2549 W BugleRcsEngine: [47] bpxc.w: Unable to send diagnostic log
+11-08 05:48:27.893  2335  6003 W BugleRcsEngine: [156] brfq.e: (PEv2-SM-Bugle-62462299): Could not retrieve MSISDN from configuration. Configuration is empty. [977a4103-e1e8-4f72-9ec7-2bf4b40df4fd]
+11-08 05:48:27.894  2335  6003 W BugleRcsEngine: [156] brfq.e: (PEv2-SM-Bugle-62462299): Skipping adding Tachyon identity key to request. Null/empty RCS msisdn from configuration for sim ID: 89860318640220133897. [977a4103-e1e8-4f72-9ec7-2bf4b40df4fd]
+11-08 05:48:28.014   560  2250 W ProcessStats: Tracking association SourceState{d3d8b47 com.google.android.inputmethod.latin/10147 ImpBg #6119} whose proc state 6 is better than process ProcessState{55fa6f4 com.google.android.gms/10128 pkg=com.google.android.gms} proc state 14 (164 skipped)
+11-08 05:48:28.278  3014  6004 W libc    : Access denied finding property "persist.adb.tls_server.enable"
+11-08 05:48:28.282  2335  6003 E BugleRcsEngine: [156] brfg.a: DroidGuardLogger: Could not create DroidGuard token creation event
+11-08 05:48:28.271  3014  3014 W binder:3014_C: type=1400 audit(0.0:17): avc:  denied  { read } for  name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=292 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+11-08 05:48:28.285  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:28.291  2335  6008 W BugleRcsEngine: [157] bpxc.w: Unable to send diagnostic log
+11-08 05:48:29.547  2335  6008 W BugleRcsEngine: [157] bpxc.w: Unable to send diagnostic log
+11-08 05:48:29.548  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:29.548  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:29.549  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:29.549  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:29.553  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:29.553  2335  2515 W BugleRcsEngine: [42] bpxc.w: Unable to send diagnostic log
+11-08 05:48:29.576  2335  2514 W BugleRcsEngine: [41] bpxc.w: Unable to send diagnostic log
+11-08 05:48:29.576  2335  2514 W BugleRcsEngine: [41] bpxc.w: Unable to send diagnostic log
+11-08 05:48:29.588  2335  6003 W BugleRcsEngine: [156] bpxc.w: Unable to send diagnostic log
+11-08 05:48:29.588  2335  6003 W BugleRcsEngine: [156] brfq.e: (PEv2-SM-Bugle-62462299): onQuitting [null]
+11-08 05:48:29.603  2335  5997 W BugleRcsEngine: [155] brcu.d: [SR]: Single Registration is disabled. Skipping Single Registration capability check for subId: 1, OS.isAtLeastS:[true], enableSingleRegistrationProvisioning:[false]
+11-08 05:48:29.616  2335  2514 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-08 05:48:29.800  2335  2348 W .apps.messaging: Reducing the number of considered missed Gc histogram windows from 195 to 100
+11-08 05:48:30.499   560  1563 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
